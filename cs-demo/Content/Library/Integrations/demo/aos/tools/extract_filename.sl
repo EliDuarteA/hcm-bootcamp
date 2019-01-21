@@ -6,6 +6,7 @@
 #! @input : Generated description
 #!
 #! @output output_1: Generated description
+#! @output filename: Filename
 #!
 #! @result SUCCESS: Operation completed successfully.
 #! @result FAILURE: Failure occurred during execution.
@@ -22,7 +23,7 @@ operation:
 
   python_action:
     script: |
-      filename = url[url.rfind("/")+1;]
+      filename = url[url.rfind("/")+1:]
 
   outputs:
     - filename: ${filename}
